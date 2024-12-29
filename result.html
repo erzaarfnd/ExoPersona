@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kesimpulan Hasil Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hasil Test</h1>
+
+    <canvas id="personalityChart" style="margin: auto 0;" width="400" height="400"></canvas>
+  <div>
+    <script>
+      // Ambil data dari session storage
+      const introvertPercentage = sessionStorage.getItem('introvert');
+      const extrovertPercentage = sessionStorage.getItem('extrovert');
+  
+      // Buat grafik menggunakan Chart.js
+      const ctx = document.getElementById('personalityChart').getContext('2d');
+      const personalityChart = new Chart(ctx, {
+        type: 'doughnut', // Tipe grafik (doughnut, bar, pie, dll.)
+        data: {
+          labels: ['Introvert', 'Extrovert'], // Label data
+          datasets: [{
+            data: [introvertPercentage, extrovertPercentage], // Data hasil
+            backgroundColor: ['#4caf50', '#2196f3'], // Warna grafik
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top'
+            },
+            tooltip: {
+              callbacks: {
+                label: function (tooltipItem) {
+                  return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+                }
+              }
+            }
+          }
+        }
+      });
+    </script>
+  </div>
+    <p id="result-text" style="text-align: center;"></p>
+    <button onclick="window.location.href='index.html'">Kembali</button>
+  </div>
+  <div>
+  <script>
+    const introvert = sessionStorage.getItem('introvert');
+    const extrovert = sessionStorage.getItem('extrovert');
+
+    let resultText = '';
+    if (introvert > extrovert) {
+      resultText = `Anda lebih introvert (${introvert}%).`;
+    } else if (extrovert > introvert) {
+      resultText = `Anda lebih ekstrovert (${extrovert}%).`;
+    } else {
+      resultText = `Anda memiliki keseimbangan antara introvert dan ekstrovert (${introvert}%).`;
+    }
+
+    document.getElementById('result-text').textContent = resultText;
+  </script>
+</div>
+</body>
+</html>

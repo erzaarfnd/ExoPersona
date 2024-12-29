@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExoPersona | Pendeteksi Kepribadian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div style="text-align: center;">
+    <img src="exopersonawhite.png" alt="Logo" style="width: 50%;"/>
+  </div>
+  
+  <div class="container">
+    <h1>Test Deteksi Kepribadian</h1>
+    <h4>Jawab pertanyaan berikut untuk mengetahui apakah Anda lebih introvert atau ekstrovert!</h4>
+    <form id="quiz-form">
+      <div class="bubble">
+        <p>1. Saya merasa nyaman saat menghabiskan waktu sendiri.</p>
+        <label><input type="radio" name="q1" value="introvert"> Setuju</label>
+        <label><input type="radio" name="q1" value="extrovert"> Tidak Setuju</label>
+      </div>
+      <div class="bubble">
+        <p>2. Saya lebih suka berbicara dalam kelompok besar.</p>
+        <label><input type="radio" name="q2" value="extrovert"> Setuju</label>
+        <label><input type="radio" name="q2" value="introvert"> Tidak Setuju</label>
+      </div>
+      <div class="bubble">
+        <p>3. Saya cenderung berpikir dulu sebelum berbicara.</p>
+        <label><input type="radio" name="q3" value="introvert"> Setuju</label>
+        <label><input type="radio" name="q3" value="extrovert"> Tidak Setuju</label>
+      </div>
+      <div class="bubble">
+        <p>4. Saya lebih suka menghadiri pesta besar daripada bersantai di rumah.</p>
+        <label><input type="radio" name="q4" value="extrovert"> Setuju</label>
+        <label><input type="radio" name="q4" value="introvert"> Tidak Setuju</label>
+      </div>
+      <div class="bubble">
+        <p>5. Saya merasa kelelahan setelah banyak berinteraksi sosial.</p>
+        <label><input type="radio" name="q5" value="introvert"> Setuju</label>
+        <label><input type="radio" name="q5" value="extrovert"> Tidak Setuju</label>
+      </div>
+      <div class="bubble">
+        <p>6. Saya merasa senang menjadi pusat perhatian.</p>
+        <label><input type="radio" name="q6" value="extrovert"> Setuju</label>
+        <label><input type="radio" name="q6" value="introvert"> Tidak Setuju</label>
+      </div>
+      <div class="bubble">
+        <p>7. Saya lebih suka bekerja sendiri daripada bekerja dalam tim.</p>
+        <label><input type="radio" name="q7" value="introvert"> Setuju</label>
+        <label><input type="radio" name="q7" value="extrovert"> Tidak Setuju</label>
+      </div>
+      <div class="bubble">
+        <p>8. Saya sering mengambil inisiatif untuk memulai percakapan.</p>
+        <label><input type="radio" name="q8" value="extrovert"> Setuju</label>
+        <label><input type="radio" name="q8" value="introvert"> Tidak Setuju</label>
+      </div>
+      <div class="bubble">
+        <p>9. Saya lebih suka mendengarkan daripada berbicara dalam diskusi.</p>
+        <label><input type="radio" name="q9" value="introvert"> Setuju</label>
+        <label><input type="radio" name="q9" value="extrovert"> Tidak Setuju</label>
+      </div>
+      <div class="bubble">
+        <p>10. Saya merasa lebih produktif di tempat yang ramai dan penuh energi.</p>
+        <label><input type="radio" name="q10" value="extrovert"> Setuju</label>
+        <label><input type="radio" name="q10" value="introvert"> Tidak Setuju</label>
+      </div>
+      <button type="button" id="submit-btn">Lihat Hasil</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
